@@ -1,10 +1,11 @@
 const { setItem, getItem } = require("./localstorage")
-const { ucFirst, wcUpper, rstring } = require("./string")
+const { ucFirst, wcUpper, rstring, upper } = require("./string")
 
 const str = {
     ucFirst,
     wcUpper,
-    rstring
+    rstring,
+    upper
 }
 
 const ls = {

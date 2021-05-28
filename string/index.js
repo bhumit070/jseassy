@@ -13,10 +13,16 @@ const wcUpper = (str) => {
 
 const rstring = str => {
     const reverseString = str.split('').reverse().join('')
+    return reverseString
+}
+
+const upper = str => {
+    return str.toUpperCase()
 }
 
 module.exports = {
     ucFirst,
     wcUpper,
-    rstring
+    rstring,
+    upper
 }

@@ -1,9 +1,9 @@
-function ucFirst(str) {
+const ucFirst = (str) => {
     if(typeof str !== 'string') return false
     return str.charAt(0).toUpperCase() + str.substring(1, str.length)
 }
 
-function wcUpper(str) {
+const wcUpper = (str) => {
     if(typeof str !== 'string') return false
     str = str.split(' ')
     const upperString = []
@@ -11,7 +11,12 @@ function wcUpper(str) {
     return upperString.join(' ')
 }
 
+const rstring = str => {
+    const reverseString = str.split('').reverse().join('')
+}
+
 module.exports = {
     ucFirst,
-    wcUpper
+    wcUpper,
+    rstring
 }

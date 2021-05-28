@@ -1,0 +1,10 @@
+{
+  "name": "superman",
+  "version": "1.0.0",
+  "description": "this is a package for utility functions",
+  "main": "index.js",
+  "repository": "https://github.com/bhumit070/test-npm.git",
+  "author": "Bhoomit",
+  "license": "MIT",
+  "private": false
+}

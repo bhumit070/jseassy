@@ -1,7 +1,7 @@
 const { sum, sortAsc, sortDesc, clone } = require('./array')
 const { setItem, getItem } = require('./localstorage')
 const { ucFirst, wcUpper, rstring, upper } = require('./string')
-
+const { clone: objClone } = require('./objects')
 const str = {
   ucFirst,
   wcUpper,
@@ -21,8 +21,13 @@ const arr = {
   clone,
 }
 
+const obj = {
+  objClone,
+}
+
 module.exports = {
   str,
   ls,
   arr,
+  obj,
 }

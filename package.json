@@ -1,6 +1,6 @@
 {
   "name": "jseassy",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "this is a package for utility functions",
   "main": "index.js",
   "repository": "https://github.com/bhumit070/jseassy.git",

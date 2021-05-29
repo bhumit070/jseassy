@@ -7,3 +7,5 @@ to install it run
 or
 
 `yarn add jseassy`
+
+click here for <a href="https://docs-jseassy.netlify.app/"> docs </a>

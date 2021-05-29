@@ -3,6 +3,4 @@ const clone = (obj) => {
   return Object.assign({}, obj)
 }
 
-module.exports = {
-  clone,
-}
+module.exports = clone

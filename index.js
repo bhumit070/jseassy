@@ -1,29 +1,26 @@
-const { sum, sortAsc, sortDesc, clone } = require('./array')
-const { set, get, remove } = require('./localstorage')
-const { ucFirst, wcUpper, rstring, upper } = require('./string')
-const { clone: objClone } = require('./objects')
 const str = {
-  ucFirst,
-  wcUpper,
-  rstring,
-  upper,
+  ucFirst: require('./string/index').ucFirst,
+  wcUpper: require('./string/index').wcUpper,
+  rstring: require('./string/index').rstring,
+  upper: require('./string/index').upper,
 }
 
 const ls = {
-  set,
-  get,
-  remove,
+  set: require('./localstorage/index').set,
+  get: require('./localstorage/index').get,
+  remove: require('./localstorage/index').remove,
 }
 
 const arr = {
-  sum,
-  sortAsc,
-  sortDesc,
-  clone,
+  sum: require('./array/sum'),
+  sortAsc: require('./array/sort').sortAsc,
+  sortDesc: require('./array/sort').sortDesc,
+  clone: require('./array/clone'),
 }
 
 const obj = {
-  objClone,
+  clone: require('./objects/clone'),
+  length: require('./objects/length'),
 }
 
 module.exports = {

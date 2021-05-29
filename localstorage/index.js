@@ -1,4 +1,4 @@
-const setItem = (key, value) => {
+const set = (key, value) => {
   if (!key || !value || typeof window === 'undefined') {
     return false
   }
@@ -6,7 +6,7 @@ const setItem = (key, value) => {
   return true
 }
 
-const getItem = (key) => {
+const get = (key) => {
   if (!key || typeof window === 'undefined') {
     return false
   }
@@ -15,25 +15,18 @@ const getItem = (key) => {
   return JSON.parse(value)
 }
 
-const clear = () => {
+const remove = (key) => {
   if (typeof window === 'undefined') {
     return false
   }
-  window.localStorage.clear()
-  return true
-}
-
-const clearItem = (item) => {
-  if (!key || typeof window === 'undefined') {
-    return false
+  if (!key) {
+    return window.localStorage.clear()
   }
-  window.localStorage.removeItem(item)
-  return true
+  return localStorage.removeItem(key)
 }
 
 module.exports = {
-  setItem,
-  getItem,
-  clear,
-  clearItem,
+  set,
+  get,
+  remove,
 }

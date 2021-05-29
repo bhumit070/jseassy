@@ -1,5 +1,5 @@
 const { sum, sortAsc, sortDesc, clone } = require('./array')
-const { setItem, getItem, clearItem, clear } = require('./localstorage')
+const { set, get, remove } = require('./localstorage')
 const { ucFirst, wcUpper, rstring, upper } = require('./string')
 const { clone: objClone } = require('./objects')
 const str = {
@@ -10,10 +10,9 @@ const str = {
 }
 
 const ls = {
-  setItem,
-  getItem,
-  clearItem,
-  clear,
+  set,
+  get,
+  remove,
 }
 
 const arr = {

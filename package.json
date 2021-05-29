@@ -1,10 +1,16 @@
 {
-  "name": "superman070",
+  "name": "jseassy",
   "version": "1.0.0",
   "description": "this is a package for utility functions",
   "main": "index.js",
-  "repository": "https://github.com/bhumit070/test-npm.git",
+  "repository": "https://github.com/bhumit070/jseassy.git",
   "author": "Bhoomit",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "keywords": [
+    "jseasy",
+    "easy js",
+    "js utility functions",
+    "javascript"
+  ]
 }

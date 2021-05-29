@@ -2,5 +2,8 @@
 
 to install it run
 
-`npm i superman`
+`npm i jseassy`
 
+or
+
+`yarn add jseassy`

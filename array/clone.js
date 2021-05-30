@@ -4,6 +4,4 @@ const clone = (arr) => {
   return clonedArr
 }
 
-module.exports = {
-  clone,
-}
+module.exports = clone

@@ -21,6 +21,7 @@ const arr = {
 const obj = {
   clone: require('./objects/clone'),
   length: require('./objects/length'),
+  freeze: require('./objects/freeze'),
 }
 
 module.exports = {

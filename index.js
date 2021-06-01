@@ -24,9 +24,16 @@ const obj = {
   freeze: require('./objects/freeze'),
 }
 
+const ssn = {
+  set: require('./sessions/index').set,
+  get: require('./sessions/index').get,
+  clear: require('./sessions/index').clear,
+}
+
 module.exports = {
   str,
   ls,
   arr,
   obj,
+  ssn,
 }

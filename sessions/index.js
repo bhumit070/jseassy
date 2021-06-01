@@ -8,12 +8,14 @@ const set = (key, value = undefined) => {
 
 const get = (key) => {
   if (!key) return false
-  return sessionStorage.getItem(key)
+  const value = sessionStorage.getItem(key)
+  if (!value) return false
+  return JSON.parse(value)
 }
 
 const clear = (key) => {
   if (!key) return sessionStorage.clear()
-  return JSON.parse(sessionStorage.clear(key))
+  return sessionStorage.clear(key)
 }
 
 module.exports = {

@@ -2,7 +2,7 @@ const set = (key, value = undefined) => {
   if (!key || typeof window === 'undefined') {
     return false
   }
-  sessionStorage.setItem(key, value)
+  sessionStorage.setItem(key, JSON.stringify(value))
   return true
 }
 
@@ -13,7 +13,7 @@ const get = (key) => {
 
 const clear = (key) => {
   if (!key) return sessionStorage.clear()
-  return sessionStorage.clear(key)
+  return JSON.parse(sessionStorage.clear(key))
 }
 
 module.exports = {

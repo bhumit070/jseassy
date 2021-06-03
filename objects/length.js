@@ -1,6 +1,8 @@
 const length = (obj) => {
   if (typeof obj !== 'object') return 0
-  return Object.keys(obj).length
+  const keysLength = Object.keys(obj).length
+  const symbolickeysLength = Object.getOwnPropertySymbols(obj).length
+  return keysLength + symbolickeysLength
 }
 
 module.exports = length

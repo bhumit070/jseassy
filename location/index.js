@@ -1,4 +1,7 @@
 const getCurrentLocation = (accuracy = false, timeout = 3, age = 0) => {
+  if (typeof accuracy !== 'boolean') accuracy = false
+  if (typeof timeout !== 'number') timeout = 3
+  if (typeof age !== 'number') age = 0
   const locationPromise = new Promise((resolve, reject) => {
     if (typeof navigator === 'undefined') {
       reject({
@@ -24,7 +27,7 @@ const getCurrentLocation = (accuracy = false, timeout = 3, age = 0) => {
         {
           enableHighAccuracy: accuracy,
           timeout: timeout * 1000,
-          maximumAge: age,
+          maximumAge: age * 1000,
         },
       )
     } else {

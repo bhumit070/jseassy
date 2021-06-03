@@ -30,10 +30,15 @@ const ssn = {
   clear: require('./sessions/index').clear,
 }
 
+const lcn = {
+  getCurrentLocation: require('./location/index'),
+}
+
 module.exports = {
   str,
   ls,
   arr,
   obj,
   ssn,
+  lcn,
 }

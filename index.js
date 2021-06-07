@@ -16,6 +16,8 @@ const arr = {
   sortAsc: require('./array/sort').sortAsc,
   sortDesc: require('./array/sort').sortDesc,
   clone: require('./array/clone'),
+  sortAscByKey: require('./array/sortByKey').sortAscByKey,
+  sortDescByKey: require('./array/sortByKey').sortDescByKey,
 }
 
 const obj = {

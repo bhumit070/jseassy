@@ -18,6 +18,8 @@ const arr = {
   clone: require('./array/clone'),
   sortAscByKey: require('./array/sortByKey').sortAscByKey,
   sortDescByKey: require('./array/sortByKey').sortDescByKey,
+  remove: require('./array/remove').remove,
+  removeByKey: require('./array/remove').removeByKey,
 }
 
 const obj = {

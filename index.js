@@ -38,6 +38,12 @@ const lcn = {
   getCurrentLocation: require('./location/index'),
 }
 
+const ck = {
+  set: require('./cookies/index').set,
+  get: require('./cookies/index').get,
+  remove: require('./cookies/index').remove,
+}
+
 module.exports = {
   str,
   ls,
@@ -45,4 +51,5 @@ module.exports = {
   obj,
   ssn,
   lcn,
+  ck,
 }

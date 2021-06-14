@@ -1,7 +1,7 @@
 const keys = (formdata) => {
   const keys = []
   if (!(formdata instanceof FormData)) return keys
-  for (key in formdata.keys()) {
+  for (key of formdata.keys()) {
     keys.push(keys)
   }
   return keys
@@ -10,7 +10,7 @@ const keys = (formdata) => {
 const values = (formdata) => {
   const values = []
   if (!(formdata instanceof FormData)) return values
-  for (value in formdata.values()) {
+  for (value of formdata.values()) {
     values.push(value)
   }
   return values

@@ -44,6 +44,13 @@ const ck = {
   remove: require('./cookies/index').remove,
 }
 
+const fd = {
+  obj: require('./formdata/get').object,
+  arr: require('./formdata/get').array,
+  make: require('./formdata/make'),
+  keys: require('./formdata/utils').keys,
+  values: require('./formdata/utils').values,
+}
 module.exports = {
   str,
   ls,
@@ -52,4 +59,5 @@ module.exports = {
   ssn,
   lcn,
   ck,
+  fd,
 }

@@ -1,0 +1,22 @@
+const keys = (formdata) => {
+  const keys = []
+  if (!(formdata instanceof FormData)) return keys
+  for (key in formdata.keys()) {
+    keys.push(keys)
+  }
+  return keys
+}
+
+const values = (formdata) => {
+  const values = []
+  if (!(formdata instanceof FormData)) return values
+  for (value in formdata.values()) {
+    values.push(value)
+  }
+  return values
+}
+
+module.exports = {
+  keys,
+  values,
+}

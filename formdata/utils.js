@@ -2,7 +2,7 @@ const keys = (formdata) => {
   const keys = []
   if (!(formdata instanceof FormData)) return keys
   for (key of formdata.keys()) {
-    keys.push(keys)
+    keys.push(key)
   }
   return keys
 }

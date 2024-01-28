@@ -13,7 +13,7 @@ const convertObjectToFormData = (data) => {
   return fd
 }
 
-convertArrayToFormData = (data) => {
+function convertArrayToFormData = (data) => {
   const fd = new FormData()
   data.map((value, index) => {
     if (typeof value === 'object') {

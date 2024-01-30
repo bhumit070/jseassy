@@ -1,19 +1,20 @@
-const set = (key, value = undefined) => {
+import { jsonParse } from '../helper';
+
+export const set = (key: string, value: unknown) => {
     if (!key || typeof window === 'undefined') {
         return false;
     }
-    sessionStorage.setItem(key, JSON.stringify(value));
-    return true;
+    if (typeof value === 'object') {
+        value = JSON.stringify(value);
+    }
+    sessionStorage.setItem(key, value as string);
 };
 
-const get = (key) => {
-    if (!key) return false;
-    const value = sessionStorage.getItem(key);
-    if (!value) return false;
-    return JSON.parse(value);
+export const get = <T extends unknown>(key: string): T => {
+    const value = sessionStorage.getItem(key) as string;
+    return value ? jsonParse(value) : value;
 };
 
-export const clear = (key) => {
-    if (!key) return sessionStorage.clear();
-    return sessionStorage.clear();
+export const clear = (key: string) => {
+    return key ? sessionStorage.removeItem(key) : sessionStorage.clear();
 };

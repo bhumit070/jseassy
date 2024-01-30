@@ -1,8 +1,8 @@
-const sum = (arr, initialValue = 0) => {
-    if(typeof arr !== "object") return false
-    return arr.reduce((currentValue,currentElement) => {
-        return currentValue + parseInt(currentElement)
-    }, initialValue)
-}
+type NumberOrNumericString = `${number}` | number;
 
-module.exports = sum
+export const sum = (arr: Array<NumberOrNumericString>, initialValue = 0) => {
+    if (typeof arr !== 'object') return false;
+    return arr.reduce((currentValue, currentElement) => {
+        return +currentValue + +currentElement;
+    }, initialValue);
+};

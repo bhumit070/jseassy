@@ -1,32 +1,25 @@
-const ucFirst = (str) => {
-  if (typeof str !== 'string') return false
-  return str.charAt(0).toUpperCase() + str.substring(1, str.length)
-}
+export const ucFirst = (str: string): string => {
+    if (typeof str !== 'string') return str;
+    return str.charAt(0).toUpperCase() + str.substring(1, str.length);
+};
 
-const wcUpper = (str) => {
-  if (typeof str !== 'string') return false
-  str = str.split(' ')
-  const upperString = []
-  str.map((word) =>
-    upperString.push(
-      word.charAt(0).toUpperCase() + word.substring(1, word.length),
-    ),
-  )
-  return upperString.join(' ')
-}
+export const wcUpper = (str: string): string => {
+    if (typeof str !== 'string') return str;
+    const splittedString = str.split(' ');
+    const upperString = [];
+    splittedString.map((word) =>
+        upperString.push(
+            word.charAt(0).toUpperCase() + word.substring(1, word.length)
+        )
+    );
+    return upperString.join(' ');
+};
 
-const rstring = (str) => {
-  const reverseString = str.split('').reverse().join('')
-  return reverseString
-}
+export const rstring = (str: string): string => {
+    const reverseString = str.split('').reverse().join('');
+    return reverseString;
+};
 
-const upper = (str) => {
-  return str.toUpperCase()
-}
-
-module.exports = {
-  ucFirst,
-  wcUpper,
-  rstring,
-  upper,
-}
+export const upper = (str: string): string => {
+    return str.toUpperCase();
+};

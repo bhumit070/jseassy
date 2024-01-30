@@ -1,5 +1,4 @@
 test.js
-.vscode
 webpack.config.js# Created by https://www.toptal.com/developers/gitignore/api/node,linux,macos,windows
 # Edit at https://www.toptal.com/developers/gitignore?templates=node,linux,macos,windows
 
@@ -25,7 +24,7 @@ webpack.config.js# Created by https://www.toptal.com/developers/gitignore/api/no
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
 
 # Thumbnails
 ._*

@@ -10,7 +10,7 @@ export const set = (key: string, value: unknown) => {
     sessionStorage.setItem(key, value as string);
 };
 
-export const get = <T extends unknown>(key: string): T => {
+export const get = <T extends unknown>(key: string): T | null => {
     const value = sessionStorage.getItem(key) as string;
     return value ? jsonParse(value) : value;
 };

@@ -1,32 +1,24 @@
-const set = (key, value) => {
-  if (!key || typeof window === 'undefined') {
-    return false
-  }
-  window.localStorage.setItem(key, JSON.stringify(value))
-  return true
-}
+const isLocalStorageAvailable = () => {
+    if (typeof window === undefined || !window.localStorage) {
+        throw new Error('localStorage is not available in this environment');
+    }
+};
 
-const get = (key) => {
-  if (!key || typeof window === 'undefined') {
-    return false
-  }
-  const value = window.localStorage.getItem(key)
-  if (!value) return false
-  return JSON.parse(value)
-}
+export const set = (key: string, value: unknown) => {
+    isLocalStorageAvailable();
+    if (typeof value === 'object') {
+        value = JSON.stringify(value);
+    }
+    localStorage.setItem(key, value as string);
+};
 
-const remove = (key) => {
-  if (typeof window === 'undefined') {
-    return false
-  }
-  if (!key) {
-    return window.localStorage.clear()
-  }
-  return localStorage.removeItem(key)
-}
+export const get = <TValue = unknown>(key: string): TValue | null => {
+    isLocalStorageAvailable();
+    const value = localStorage.getItem(key);
+    return value ? JSON.parse(value) : value;
+};
 
-module.exports = {
-  set,
-  get,
-  remove,
-}
+export const remove = (key: string) => {
+    isLocalStorageAvailable();
+    key ? localStorage.removeItem(key) : localStorage.clear();
+};

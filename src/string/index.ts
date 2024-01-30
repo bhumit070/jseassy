@@ -9,6 +9,7 @@ export const wcUpper = (str: string): string => {
     const upperString = [];
     splittedString.map((word) =>
         upperString.push(
+            // @ts-ignore
             word.charAt(0).toUpperCase() + word.substring(1, word.length)
         )
     );

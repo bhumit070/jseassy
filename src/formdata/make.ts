@@ -7,7 +7,8 @@ const convertToFormData = (data) => {
 
 const convertObjectToFormData = (data) => {
     const fd = new FormData();
-    for (value in data) {
+    for (const value in data) {
+        // @ts-ignore
         fd.append(value, object[value]);
     }
     return fd;
@@ -18,8 +19,10 @@ const convertArrayToFormData = (data) => {
     data.map((value, index) => {
         if (typeof value === 'object') {
             const key = Object.keys(value)[0];
+            // @ts-ignore
             fd.append(key, value[key]);
         } else {
+            // @ts-ignore
             fd.append(index, value);
         }
     });

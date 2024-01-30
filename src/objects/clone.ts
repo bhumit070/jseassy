@@ -1,6 +1,6 @@
-const clone = (obj) => {
-  if (typeof obj !== 'object') return false
-  return Object.assign({}, obj)
-}
-
-module.exports = clone
+export const clone = (obj: object): object => {
+    if (typeof obj === 'object' && !Array.isArray(obj)) {
+        return { ...obj };
+    }
+    throw new Error('Invalid argument type');
+};

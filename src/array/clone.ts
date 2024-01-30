@@ -1,7 +1,6 @@
-const clone = (arr) => {
-  if (typeof arr !== 'object') return false
-  const clonedArr = [...arr]
-  return clonedArr
-}
-
-module.exports = clone
+export const clone = <T extends any[]>(arr: T): T => {
+    if (Array.isArray(arr)) {
+        return [...arr] as T;
+    }
+    throw new Error('Invalid argument type. Expected an array.');
+};

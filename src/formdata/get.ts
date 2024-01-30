@@ -1,25 +1,8 @@
-const object = (formdata) => {
-    const object = {};
+const object = (formdata: FormData) => {
+    const object: Record<string, FormDataEntryValue> = {};
     if (!(formdata instanceof FormData)) return object;
     formdata.forEach((value, key) => {
-        object[key] = value;
+        object[key as string] = value;
     });
     return object;
-};
-
-const array = (formdata) => {
-    const array = [];
-    if (!(formdata instanceof FormData)) return array;
-    formdata.forEach((value, key) => {
-        // @ts-ignore
-        array.push({
-            [key]: value,
-        });
-    });
-    return array;
-};
-
-module.exports = {
-    object,
-    array,
 };

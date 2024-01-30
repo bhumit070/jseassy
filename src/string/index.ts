@@ -6,7 +6,7 @@ export const ucFirst = (str: string): string => {
 export const wcUpper = (str: string): string => {
     if (typeof str !== 'string') return str;
     const splittedString = str.split(' ');
-    const upperString = [];
+    const upperString: string[] = [];
     splittedString.map((word) =>
         upperString.push(
             // @ts-ignore

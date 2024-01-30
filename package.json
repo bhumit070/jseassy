@@ -17,6 +17,7 @@
     "build": "tsc"
   },
   "devDependencies": {
+    "@types/node": "^20.11.10",
     "prettier": "^3.2.4",
     "typescript": "*"
   }

@@ -1,6 +1,6 @@
 {
   "name": "jseassy",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "this is a package for utility functions",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
